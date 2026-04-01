@@ -1,7 +1,5 @@
 # Engineering Mathematics - HW1
 
-## 1. Separable Variables
-
 **Q4: Solve $\frac{dy}{dx} = y \ln y$**
 
 **Solution:**
@@ -26,8 +24,6 @@ $$y = e^{c_1 e^x} \quad $$
 
 ---
 **Note:** If $y=1$, $\ln y = 0$, then $\frac{dy}{dx} = 0$. Thus, $y=1$ is also a solution (the equilibrium solution).
-
-## 2. Cauchy-Euler Equations
 
 **Q14: Solve $x^2 y'' + 3xy' + y = 0$**
 
