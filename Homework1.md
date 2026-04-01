@@ -48,4 +48,4 @@ For a repeated root $m$ in a Cauchy-Euler equation, the basis of solutions is $x
 
 **General Solution:**
 $$y = c_1 x^{-1} + c_2 x^{-1} \ln x$$
-$$y = \frac{c_1 + c_2 \ln x}{x} \quad ✅$$
+$$y = \frac{c_1 + c_2 \ln x}{x} \quad $$
