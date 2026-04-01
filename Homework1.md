@@ -23,3 +23,6 @@ $$|\ln y| = e^{x+C} = e^C e^x$$
 Let $c_1 = \pm e^C$:
 $$\ln y = c_1 e^x$$
 $$y = e^{c_1 e^x} \quad ✅$$
+
+---
+**Note:** If $y=1$, $\ln y = 0$, then $\frac{dy}{dx} = 0$. Thus, $y=1$ is also a solution (the equilibrium solution).
