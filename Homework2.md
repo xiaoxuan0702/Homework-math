@@ -1,8 +1,8 @@
-# Advanced Engineering Mathematics Homework: Inverse Laplace Transform
+# Homework2
 
 ## Problem (4)
 Find the inverse Laplace transform of the following function:
-$$\mathcal{L}^{-1} \left\{ \frac{s+3}{(s+1)^2(s+2)} \right\}$$
+$$\mathcal{L}^{-1} \{ \frac{s+3}{(s+1)^2(s+2)} \}$$
 
 ---
 
@@ -44,13 +44,15 @@ $$\frac{s+3}{(s+1)^2(s+2)} = -\frac{1}{s+1} + \frac{2}{(s+1)^2} + \frac{1}{s+2}$
 
 ### Step 4: Find the Inverse Laplace Transform of Each Term (Table Lookup)
 According to the standard Laplace transform pairs:
-1.  $$\mathcal{L}^{-1}\left\{\frac{1}{s+a}\right\} = e^{-at}$$
-2.  $$\mathcal{L}^{-1}\left\{\frac{1}{(s+a)^2}\right\} = t \cdot e^{-at}$$ (First Shifting Theorem)
+
+1. $$\mathcal{L}^{-1} \{ \frac{1}{s+a} \} = e^{-at}$$
+2. $$\mathcal{L}^{-1} \{ \frac{1}{(s+a)^2} \} = t \cdot e^{-at}$$ (First Shifting Theorem)
 
 Applying these formulas to each of our three terms gives:
-* $$\mathcal{L}^{-1}\left\{-\frac{1}{s+1}\right\} = -e^{-t}$$
-* $$\mathcal{L}^{-1}\left\{\frac{2}{(s+1)^2}\right\} = 2te^{-t}$$
-* $$\mathcal{L}^{-1}\left\{\frac{1}{s+2}\right\} = e^{-2t}$$
+
+* $$\mathcal{L}^{-1} \{ -\frac{1}{s+1} \} = -e^{-t}$$
+* $$\mathcal{L}^{-1} \{ \frac{2}{(s+1)^2} \} = 2te^{-t}$$
+* $$\mathcal{L}^{-1} \{ \frac{1}{s+2} \} = e^{-2t}$$
 
 ---
 
