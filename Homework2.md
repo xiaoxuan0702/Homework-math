@@ -65,3 +65,52 @@ $$f(t) = -e^{-t} + 2te^{-t} + e^{-2t} \quad (t \ge 0)$$
 Alternatively, factoring out the common base $e^{-t}$ gives the simplified form:
 $$f(t) = (2t - 1)e^{-t} + e^{-2t} \quad (t \ge 0)$$
 
+## Problem (6)
+Find the Fourier transform of the function $f(t) = te^{-5t}$ for $t \ge 0$.
+
+---
+
+### Detailed Step-by-Step Solution
+
+#### Method 1: Using Fourier Transform Properties (Recommended)
+
+1. **Base Transform Pair:**
+   From the standard Fourier transform pairs, the transform of a causal exponential decay function is:
+   $$\mathcal{F} \{ e^{-at}u(t) \} = \frac{1}{a + j\omega}$$
+   Setting $a = 5$ gives:
+   $$\mathcal{X}(\omega) = \mathcal{F} \{ e^{-5t}u(t) \} = \frac{1}{5 + j\omega} = (5 + j\omega)^{-1}$$
+
+2. **Multiplication by $t$ Property (Frequency Differentiation):**
+   The property states that multiplying a time-domain function by $t$ corresponds to differentiation in the frequency domain multiplied by $j$:
+   $$\mathcal{F} \{ t \cdot x(t) \} = j \cdot \frac{d}{d\omega}\mathcal{X}(\omega)$$
+
+3. **Differentiation:**
+   Differentiating $\mathcal{X}(\omega)$ with respect to $\omega$ using the chain rule:
+   $$\frac{d}{d\omega} (5 + j\omega)^{-1} = -1 \cdot (5 + j\omega)^{-2} \cdot \frac{d}{d\omega}(5+j\omega) = \frac{-j}{(5 + j\omega)^2}$$
+
+4. **Final Combination:**
+   Multiply the derivative by the factor of $j$:
+   $$F(\omega) = j \cdot [ \frac{-j}{(5 + j\omega)^2} ] = \frac{-j^2}{(5 + j\omega)^2}$$
+   Since $j^2 = -1$, we have $-j^2 = 1$:
+   $$F(\omega) = \frac{1}{(5 + j\omega)^2}$$
+
+---
+
+#### Method 2: Direct Integration by Definition
+
+By definition, the Fourier transform is:
+$$F(\omega) = \int_{0}^{\infty} te^{-5t}e^{-j\omega t} dt = \int_{0}^{\infty} t e^{-(5 + j\omega)t} dt$$
+
+Let $K = 5 + j\omega$. We evaluate the integral using integration by parts ($\int u dv = uv - \int v du$):
+* Let $u = t \implies du = dt$
+* Let $dv = e^{-Kt}dt \implies v = -\frac{1}{K}e^{-Kt}$
+
+$$\int_{0}^{\infty} t e^{-Kt} dt = [ -\frac{t}{K}e^{-Kt} ]_{0}^{\infty} - \int_{0}^{\infty} (-\frac{1}{K}e^{-Kt}) dt$$
+
+Evaluating the limits:
+* The first term $[ -\frac{t}{K}e^{-Kt} ]_{0}^{\infty} = 0$ because $e^{-5t}$ dominates $t$ as $t \to \infty$.
+* The remaining integral becomes:
+  $$\frac{1}{K} \int_{0}^{\infty} e^{-Kt} dt = \frac{1}{K} [ -\frac{1}{K}e^{-Kt} ]_{0}^{\infty} = \frac{1}{K^2}$$
+
+Substituting $K = 5 + j\omega$ back into the equation yields the final result:
+$$F(\omega) = \frac{1}{(5 + j\omega)^2}$$
